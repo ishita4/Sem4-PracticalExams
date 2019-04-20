@@ -2,7 +2,7 @@
 #define SIZE 50
 int arr[SIZE];
 
-int partition(int start,int mid,int end)
+int merge(int start,int mid,int end)
 {
     int i=start,j=mid+1,temp[SIZE],k=0,index=0;
 
@@ -57,7 +57,7 @@ void mergeSort(int beg, int end)
         mid=(beg+end)/2;
         mergeSort(0,mid);
         mergeSort(mid+1,end);
-        partition(beg,mid,end);
+        merge(beg,mid,end);
     }
 
 }
